@@ -1,0 +1,8 @@
+print("=============================")
+print("      EXTENSION FINDER")
+print("=============================")
+
+filename = input("Input the Filename (with extension*): ")
+f_ext = filename.split(".")
+#print(f_ext)
+print ("The extension of the file is : " + repr(f_ext[1]))
