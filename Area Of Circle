@@ -1,11 +1,13 @@
-import math                                            #Import Required Module
+import math                                                         #Import Required Module
 
 print("=============================")
 print("      AREA CALCULATOR")
 print("=============================")
 
 
-r = float(input("Enter Radius Of Circle : "))          #Input Radius Form User
-a = math.pi*r**2                                       #Calculate the Area
-print("Area Of Circle with radius",r,"is :",a)         #Print The Output
+r = float(input("Enter Radius Of Circle : "))                        #Input Radius Form User
+a = math.pi*r**2                                                     #Calculate the Area
+print("--------------------------------------------------------")
+print("Area Of Circle with radius",r,"is :",a)                       #Print The Output
+print("--------------------------------------------------------")
 
