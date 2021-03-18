@@ -2,7 +2,22 @@ print("=============================")
 print("      EXTENSION FINDER")
 print("=============================")
 
-filename = input("Input the Filename (with extension*): ")
-f_ext = filename.split(".")
-#print(f_ext)
-print ("The extension of the file is : " + repr(f_ext[1]))
+
+
+file_name = input("Please Enter The File Name of Code file With Extension : ")         #Taking Input
+
+Dict = {                                                                               #Defining Dictionary
+    "py"   : "Python",
+    "java" : "Java",
+    "c"    : "C Program",
+    "cpp"  : "C++ Program",
+    "txt"  : "Text File"
+        }
+
+ext_name = file_name.split(".")[-1]                                                    #Splitting The Extension Name
+
+
+if ext_name in Dict:                                                                   #Condition Statements & Printing the Output
+    print ("Entered File Type is : ", Dict[ext_name])
+else :
+    print ("Please enter a valid code extension!")
