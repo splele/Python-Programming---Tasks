@@ -9,25 +9,26 @@ one = int(input('How Many Elements in your First List?'))       #Inputing The Nu
 two = int(input('How Many Elements in your Second List?'))
 
 a,b,i,j = 0,0,0,0                                               #Defining Loop Variables
-
+print("--------------------------------------------------------")
 print("Enter The Elements for First List : ")                   #Inputing The Elements For the List1
 while a < one:
     ele1= int(input())
     list1.append(ele1)
     a+=1
-
+print("--------------------------------------------------------")
 print("Enter The Elements for Second List : ")                  #Inputing The Elements For the List1
 while b < one:
     ele2= int(input())
     list2.append(ele2)
     b+=1
-    
+print("--------------------------------------------------------")    
 print("Positive Elements of LIST 1 are : ")                                              
 for i in range(0,len(list1),) :                                #Loop 
     if list1[i] > 0 :
        print(list1[i])
-
+print("--------------------------------------------------------")
 print("Positive Elements of LIST 2 are : ")  
 for j in range(0,len(list2),) :
     if list2[j] > 0 :
        print(list2[i])
+print("--------------------------------------------------------")
