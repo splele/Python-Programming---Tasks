@@ -1,0 +1,21 @@
+print("=============================")
+print("      FIBONACCI SERIES")
+print("=============================")
+
+n = int(input("How many Numbers To be Shown In Series ? "))        #Inputing Number of elements to show
+print("--------------------------------------------------------")
+i,a,b = 0,0,1                                                       #Defining Loop Variables
+
+print("Your Fibonacci Series Is:")
+if n==0:                                                            #Condition Statements
+    print("Please Enter A Number Greater than ZERO!")
+elif n==1:
+    print("0")
+else:
+    while i<n:                                                      #Loop
+        m = a+b
+        print(a)
+        a = b
+        b = m
+        i+=1
+print("--------------------------------------------------------")        
