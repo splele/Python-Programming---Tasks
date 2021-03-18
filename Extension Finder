@@ -5,7 +5,7 @@ print("=============================")
 
 
 file_name = input("Please Enter The File Name of Code file With Extension : ")         #Taking Input
-
+print("-------------------------------------------------------------------------")
 Dict = {                                                                               #Defining Dictionary
     "py"   : "Python",
     "java" : "Java",
@@ -21,3 +21,4 @@ if ext_name in Dict:                                                            
     print ("Entered File Type is : ", Dict[ext_name])
 else :
     print ("Please enter a valid code extension!")
+print("-------------------------------------------------------------------------")
