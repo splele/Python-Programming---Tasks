@@ -1,0 +1,25 @@
+print("===============================================")
+print("             FREQUENCY FINDER")
+print("===============================================")
+
+a = str(input("Enter a Word : "))
+print("-------------------------------------------------")
+def most_frequent(string):
+    
+    freq = {}
+    
+    for i in string:
+        if  i in freq:
+            freq[i] += 1
+        else :
+            freq[i] = 1
+        
+    print("\nElements And Thier Frequencies As Follows :")
+    for i in freq.keys():
+        print (str(i) +'='+ str(freq[i]))
+    
+    return ("")
+
+print(most_frequent(a))
+print("-------------------------------------------------")
+
