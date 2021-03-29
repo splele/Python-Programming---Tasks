@@ -1,0 +1,89 @@
+print("=====================================================================================================================")
+print("                                          STUDENT ADMINISTARTION PROGRAM")
+print("=====================================================================================================================")
+
+#Student Administration program
+import csv
+def write_into_csv(list):
+    with open('student.csv', 'a', newline='') as csv_file:
+        
+        writer = csv.writer(csv_file)
+        
+        if csv_file.tell() == 0:
+         writer.writerow(["Name","Age","Year Of Study","E-mail Address"])
+        
+        writer.writerow(student_list)
+
+##Main Function--------------------------------------------------------------------------------------------------------------
+if __name__== '__main__':
+    
+    #MAIN WHILE
+    c=True
+    while (c == True):
+        print("---------------------------------------------------------------------------------------------------------------------")
+        student_info = input ("Enter Student Information : Format(Name/Age/Year of Study/E-Mail) : ")
+        student_list = student_info.split ('/')
+        print("---------------------------------------------------------------------------------------------------------------------")
+        
+        #INDEX CHECK WHILE--------------------------------------------------------------------------------------------------
+        c=None   
+        while (c==None):
+            check_one = len(student_list)
+         
+        #IF INDEX SATIFIES CODE CONTINUES/-
+            if check_one > 3:
+                print("---------------------------------------------------------------------------------------------------------------------")
+                print("Entered Information is:\nName:          {}\nAge:           {}\nYear Of Study: {}\nE-Mail:        {}"
+                       .format(student_list[0],student_list[1],student_list[2],student_list[3]))
+                print("---------------------------------------------------------------------------------------------------------------------")
+            #INFORMATION CHECK WHILE LOOOP------------------------------------------------------------------------------------
+                c1=None  
+                while (c1==None):
+                    check = input("Is The Information Correct? (y/n): ")
+                    print("---------------------------------------------------------------------------------------------------------------------")
+                    #IF INFORMATION CORRECT RUN AHEAD/-
+                    if check == "y":
+                        c1 = True
+                        c  = True
+                        write_into_csv(student_list)                                #WRITE TO FILE
+                        
+                        #MORE INFORMATION WHILE LOOP--------------------------------------------------------------------------
+                        c2=None  
+                        while (c2==None):
+                            opt = input("Do You Want To Continue Adding Info? (y/n): ")
+                            
+                            #IF YES RERUN INFORMATION WHILE LOOP/-
+                            if opt == "y":
+                                c2 = True
+                                c1 = True
+                            #ELSE IF NO QUIT THE PROGRAM/-
+                            elif opt == "n":
+                                c2 = False
+                                c  = False
+                                
+                            #INVALID CHOICE RERUN THE MORE INFORMATION WHILE LOOP/-
+                            else :
+                                c2 = None
+                                print('Please Enter A Valid Option!')
+                    #ELSE IF INFORMATION IN INCORRECT RERUN THE MAIN WHILE LOOP/-
+                    elif check == "n":
+                        c1=False
+                        print("Please Re-Enter The Values!")
+                        c  = True
+                        
+                    #INCORRECT CHOICE RERUN THE INFORMATION CHECK WHILE LOOP/-
+                    else :
+                        c1 = None
+                        
+                        print('Please Enter A Valid Option!')
+                        #c=True
+
+
+            #ELSE INDEX NOT SATISFIED RERUN MAIN WHILE LOOP/-
+            else:
+                print("Please Complete The Information!")
+                c=True
+            
+            
+    
+       
